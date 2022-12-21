@@ -1,0 +1,4 @@
+Django
+line-bot-sdk
+configparser
+gunicorn
