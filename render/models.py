@@ -104,7 +104,7 @@ class Weather:
                         {
                             'type' : 'box',
                             'layout' : 'vertical',
-                            'contents' : {
+                            'contents' : [
                                 {
                                     'type' : 'text',
                                     'text' : '從' + self.startTime[i*2]
@@ -187,7 +187,7 @@ class Weather:
                                         }
                                     ]
                                 }
-                            },
+                            ],
                         },
                         {
                             'type' : 'separator',
@@ -197,7 +197,7 @@ class Weather:
                         {
                             'type' : 'box',
                             'layout' : 'vertical',
-                            'contents' : {
+                            'contents' : [
                                 {
                                     'type' : 'text',
                                     'text' : '從' + self.startTime[i*2+1]
@@ -280,7 +280,7 @@ class Weather:
                                         }
                                     ]
                                 }
-                            },
+                            ]
                         }
                     ]
                 }    
