@@ -25,7 +25,7 @@ class Reply:
             self.exist = False
     def reply(self,event,api):
         api.reply_message(
-            reply_token = event.reply_token,
+            reply_token = event.replyToken,
             messages = self.process.msg()
         )
         return

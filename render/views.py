@@ -34,7 +34,7 @@ def callback(request):
 
 @handler.add(event=MessageEvent,message=TextMessage)
 def handle_message(event):
-    msg = event.messages.text.split('#') 
+    msg = event.message.text.split('#') 
     if msg[0] != '':
         cmd = msg[0]
         if len(msg) < 4:
