@@ -286,7 +286,7 @@ class Receipt:
         return
     def msg(self):
         return
-class Weather:
+class Subscribe:
     def __init__(self,location='宜蘭縣',duration=3):
         return
     def msg(self):
