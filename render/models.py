@@ -71,6 +71,14 @@ class Weather:
         res = requests.get(url).json()
         return res['records']['locations'][0]['location'][0]['weatherElement']
     def _dealInfo(self):
+        self.PoP12h = []
+        self.T = []
+        self.MaxAT = []
+        self.WeatherDescription = []
+        self.MinAT = []
+        self.startTime = []
+        self.endTime = []
+        self.UVI = []
         for i in range(0,14):
             self.PoP12h.append( self.info[0]['time'][i]['elementValue'][0]['value'] + '%' )
             self.T.append( self.info[1]['time'][i]['elementValue'][0]['value'] + '℃' )
