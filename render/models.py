@@ -5,7 +5,7 @@ import datetime
 
 # Create your models here.
 class Reply:
-    def __init__(self,cmd='', auth='',location='',duration=3'):
+    def __init__(self,cmd='', auth='',location='',duration='3'):
         self.exist = True
         if cmd == '天氣':
             self.process = Weather(auth,location,duration)
