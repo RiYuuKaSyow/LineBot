@@ -41,7 +41,7 @@ def handle_message(event):
             duration = 3
         if len(msg) < 3:
             location = ''
-        rpy = Reply(cmd=cmd, Auth=settings.WEATHER_AUTH, location=location, duration=duration)
+        rpy = Reply(cmd=cmd, auth=settings.WEATHER_AUTH, location=location, duration=duration)
         if rpy.exist == False:
             return
         rpy.reply(event,lbApi)
