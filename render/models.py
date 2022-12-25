@@ -39,7 +39,7 @@ class Weather:
     def __init__(self, auth='',location='宜蘭縣',duration=3):
         self.elements = 'MaxAT,MinAT,PoP12h,UVI,WeatherDescription,T' ;
         self.location = location
-        self.duration = duration > 7 ? 7 : duration
+        self.duration = 7 if duration > 7 else duration
         self.auth = auth
         self.info = self._getinf()
         self._dealInfo()
