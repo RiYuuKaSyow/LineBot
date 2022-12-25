@@ -3,6 +3,7 @@ from django.conf import settings
 from django.http import (
     HttpResponse, HttpRequest, HttpResponseBadRequest
 )
+from .models import Reply
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
 import configparser
@@ -33,7 +34,21 @@ def callback(request):
 
 @handler.add(event=MessageEvent,message=TextMessage)
 def handle_message(event):
-    lbApi.reply_message(
-        reply_token=event.reply_token,
-        messages=TextSendMessage(text=event.messages.text)
-    )
+    msg = event.messages.text.split('#') 
+    if msg[0] != '':
+        cmd = msg[0]
+        if len(msg) < 4:
+            duration = 3
+        if len(msg) < 3:
+            location = ''
+        rpy = Reply(cmd=cmd, Auth=settings.WEATHER_AUTH, location=location, duration=duration)
+        if rpy.exist == False:
+            return
+        rpy.reply(event,lbApi)
+    return
+
+#    lbApi.reply_message(
+#        reply_token=event.reply_token,
+#        messages=TextSendMessage(text=event.messages.text)
+#    )
+#    return
