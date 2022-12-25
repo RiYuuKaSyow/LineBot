@@ -46,7 +46,7 @@ class Weather:
     def msg(self):
         res = {
             'type' : 'flex',
-            'altText' : '後' + self.duration + '天的' + self.location + '天氣預報',
+            'altText' : '後' + str(self.duration) + '天的' + self.location + '天氣預報',
             'contents' : [
                 {
                     'type' : 'carousel',
