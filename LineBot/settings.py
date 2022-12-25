@@ -30,6 +30,8 @@ ALLOWED_HOSTS = ['linebot-z25s.onrender.com']
 #linebot
 LINE_TOKEN = os.getenv('token','test')
 LINE_SECRET = os.getenv('secret','test')
+#weather
+WEATHER_AUTH = os.getenv('weatherauth','test')
 
 # Application definition
 
