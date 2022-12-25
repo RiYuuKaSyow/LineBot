@@ -120,7 +120,7 @@ class Weather:
                                 {
                                     'type' : 'box',
                                     'layout' : 'horizontal',
-                                    'contents' : {
+                                    'contents' : [
                                         {
                                             'type' : 'text',
                                             'text' : '降雨機率' 
@@ -129,12 +129,12 @@ class Weather:
                                             'type' : 'text',
                                             'text' : self.PoP12h[i*2]
                                         }
-                                    }
+                                    ]
                                 },
                                 {
                                     'type' : 'box',
                                     'layout' : 'horizontal',
-                                    'contents' : {
+                                    'contents' : [
                                         {
                                             'type' : 'text',
                                             'text' : '平均溫度' 
@@ -143,12 +143,12 @@ class Weather:
                                             'type' : 'text',
                                             'text' : self.T[i*2]
                                         }
-                                    }
+                                    ]
                                 },
                                 {
                                     'type' : 'box',
                                     'layout' : 'horizontal',
-                                    'contents' : {
+                                    'contents' : [
                                         {
                                             'type' : 'text',
                                             'text' : '最高體感溫度' 
@@ -157,12 +157,12 @@ class Weather:
                                             'type' : 'text',
                                             'text' : self.MaxAT[i*2]
                                         }
-                                    }
+                                    ]
                                 },
                                 {
                                     'type' : 'box',
                                     'layout' : 'horizontal',
-                                    'contents' : {
+                                    'contents' : [
                                         {
                                             'type' : 'text',
                                             'text' : '最低體感溫度' 
@@ -171,12 +171,12 @@ class Weather:
                                             'type' : 'text',
                                             'text' : self.MinAT[i*2]
                                         }
-                                    }
+                                    ]
                                 },
                                 {
                                     'type' : 'box',
                                     'layout' : 'horizontal',
-                                    'contents' : {
+                                    'contents' : [
                                         {
                                             'type' : 'text',
                                             'text' : '紫外線指數' 
@@ -185,7 +185,7 @@ class Weather:
                                             'type' : 'text',
                                             'text' : self.UVI[i*2]
                                         }
-                                    }
+                                    ]
                                 }
                             },
                         },
@@ -213,7 +213,7 @@ class Weather:
                                 {
                                     'type' : 'box',
                                     'layout' : 'horizontal',
-                                    'contents' : {
+                                    'contents' : [
                                         {
                                             'type' : 'text',
                                             'text' : '降雨機率' 
@@ -222,12 +222,12 @@ class Weather:
                                             'type' : 'text',
                                             'text' : self.PoP12h[i*2+1]
                                         }
-                                    }
+                                    ]
                                 },
                                 {
                                     'type' : 'box',
                                     'layout' : 'horizontal',
-                                    'contents' : {
+                                    'contents' : [
                                         {
                                             'type' : 'text',
                                             'text' : '平均溫度' 
@@ -236,12 +236,12 @@ class Weather:
                                             'type' : 'text',
                                             'text' : self.T[i*2+1]
                                         }
-                                    }
+                                    ]
                                 },
                                 {
                                     'type' : 'box',
                                     'layout' : 'horizontal',
-                                    'contents' : {
+                                    'contents' : [
                                         {
                                             'type' : 'text',
                                             'text' : '最高體感溫度' 
@@ -250,12 +250,12 @@ class Weather:
                                             'type' : 'text',
                                             'text' : self.MaxAT[i*2+1]
                                         }
-                                    }
+                                    ]
                                 },
                                 {
                                     'type' : 'box',
                                     'layout' : 'horizontal',
-                                    'contents' : {
+                                    'contents' : [
                                         {
                                             'type' : 'text',
                                             'text' : '最低體感溫度' 
@@ -264,12 +264,12 @@ class Weather:
                                             'type' : 'text',
                                             'text' : self.MinAT[i*2+1]
                                         }
-                                    }
+                                    ]
                                 },
                                 {
                                     'type' : 'box',
                                     'layout' : 'horizontal',
-                                    'contents' : {
+                                    'contents' : [
                                         {
                                             'type' : 'text',
                                             'text' : '紫外線指數' 
@@ -278,7 +278,7 @@ class Weather:
                                             'type' : 'text',
                                             'text' : self.UVI[i*2+1]
                                         }
-                                    }
+                                    ]
                                 }
                             },
                         }
