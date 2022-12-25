@@ -83,6 +83,7 @@ class Weather:
                 self.UVI.append( self.info[3]['time'][i]['elementValue'][0]['value'] )
             else:
                 self.UVI.append( '' )
+        return
     def _result(self):
         res = []
         for i in range(0,self.duration):
@@ -282,10 +283,11 @@ class Weather:
 
 class Receipt:
     def __init__(self):
-        
+        return
     def msg(self):
-
+        return
 class Weather:
     def __init__(self,location='宜蘭縣',duration=3):
-        
+        return
     def msg(self):
+        return
