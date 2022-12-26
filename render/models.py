@@ -48,8 +48,8 @@ class Weather:
         self._dealInfo()
     def msg(self):
         res = FlexSendMessage(
-            'altText' : '後' + str(self.duration) + '天的' + self.location + '天氣預報',
-            'contents' : [
+            altText='後' + str(self.duration) + '天的' + self.location + '天氣預報',
+            contents=[
                 {
                     'type' : 'carousel',
                     'contents' : self._result()
