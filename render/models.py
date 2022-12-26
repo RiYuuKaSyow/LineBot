@@ -49,12 +49,10 @@ class Weather:
     def msg(self):
         res = FlexSendMessage(
             altText='後' + str(self.duration) + '天的' + self.location + '天氣預報',
-            contents=[
-                {
+            contents={
                     'type' : 'carousel',
                     'contents' : self._result()
                 }
-            ]
         )
         return res
     def _getinf(self):
