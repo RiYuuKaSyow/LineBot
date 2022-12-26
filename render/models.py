@@ -2,6 +2,9 @@ from django.db import models
 import json
 import requests
 import datetime
+from linebot.models import(
+    FlexSendMessage,
+)
 
 # Create your models here.
 class Reply:
@@ -44,8 +47,7 @@ class Weather:
         self.info = self._getinf()
         self._dealInfo()
     def msg(self):
-        res = {
-            'type' : 'flex',
+        res = FlexSendMessage(
             'altText' : '後' + str(self.duration) + '天的' + self.location + '天氣預報',
             'contents' : [
                 {
@@ -53,7 +55,7 @@ class Weather:
                     'contents' : self._result()
                 }
             ]
-        }
+        )
         return res
     def _getinf(self):
         tz = datetime.timezone( datetime.timedelta(hours=+8) )
