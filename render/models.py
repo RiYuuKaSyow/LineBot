@@ -54,7 +54,7 @@ class Weather:
                 }
             ]
         }
-        return json.dumps(res)
+        return res
     def _getinf(self):
         tz = datetime.timezone( datetime.timedelta(hours=+8) )
         now = datetime.datetime.now(tz)
