@@ -25,7 +25,7 @@ SECRET_KEY = os.getenv('djangoSecret','test')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['linebot-z25s.onrender.com']
+ALLOWED_HOSTS = ['linebot-z25s.onrender.com', 'szkzsyow.uc.r.appspot.com']
 
 #linebot
 LINE_TOKEN = os.getenv('token','test')
