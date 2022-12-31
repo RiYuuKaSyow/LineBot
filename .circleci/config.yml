@@ -59,6 +59,7 @@ jobs:
           name: gcloud
           command: |
             echo $GCLOUD_SERVICE_KEY | gcloud auth activate-service-account szkzsyow@appspot.gserviceaccount.com --key-file=-
+            gcloud --quiet config set project ${GOOGLE_PROJECT_ID}
       - run:
           name: deploy to GAE
           command: |
