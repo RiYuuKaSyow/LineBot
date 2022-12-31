@@ -318,7 +318,7 @@ class Reply:
             )
             return res
         def _getinf(self):
-            res = requests.get('https://invoice.etax.nat.gov.tw/invoice.xml')
+            res = requests.get('https://invoice.etax.nat.gov.tw/invoice.xml').text
             root = ET.fromstring(res)
             self.month = root[0][4][0].text
             htmlp = htmlParser()
