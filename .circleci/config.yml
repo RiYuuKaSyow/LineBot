@@ -53,7 +53,7 @@ jobs:
     executor: python/default
 
     steps:
-      - chechout
+      - checkout
 
       - run:
           name: gcloud
