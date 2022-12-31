@@ -13,19 +13,19 @@ class Reply:
     def __init__(self,cmd='', auth='',location='',duration='3'):
         self.exist = True
         if cmd == '天氣':
-            self.process = Weather(auth,location,duration)
+            self.process = self.Weather(auth,location,duration)
         elif cmd == '訂閱天氣':
-            self.process = Weather(location)
+            self.process = self.Weather(location)
         elif cmd == '更改地區':
-            self.process = Weather(location)
+            self.process = self.Weather(location)
         elif cmd == '取消訂閱':
-            self.process = Weather(location)
+            self.process = self.Weather(location)
         elif cmd == '發票':
-            self.process = Receipt()
+            self.process = self.Receipt()
         elif cmd == '指令':
-            self.process = Weather(location)
+            self.process = self.Weather(location)
         elif cmd == '地區':
-            self.process = Weather(location)
+            self.process = self.Weather(location)
         else:
             self.exist = False
     def reply(self,event,api):
