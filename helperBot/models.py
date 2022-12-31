@@ -321,7 +321,7 @@ class Reply:
             res = requests.get('https://invoice.etax.nat.gov.tw/invoice.xml').text
             root = ET.fromstring(res)
             self.month = root[0][4][0].text
-            htmlp = htmlParser()
+            htmlp = self.htmlParser()
             htmlp.feed(root[0][4][3].text)
             self.data = []
             for l in htmlp.datalist:
