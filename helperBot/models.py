@@ -312,7 +312,7 @@ class Reply:
                                 'color' : '#000000'
                             }
                         ]
-                    }
+                    },
                     'body' : self._contents()
                 }
             )
