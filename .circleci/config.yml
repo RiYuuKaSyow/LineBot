@@ -21,8 +21,9 @@ jobs:
     # The executor is the environment in which the steps below will be executed - below will use a python 3.10.2 container
     # Change the version below to your required version of python
     executor: python/default
-    docker:
-      - image: cimg/python:3.10.2
+
+    #docker:
+    #  - image: cimg/python:3.10.2
     # Checkout the code as the first step. This is a dedicated CircleCI step.
     # The python orb's install-packages step will install the dependencies from a Pipfile via Pipenv by default.
     # Here we're making sure we use just use the system-wide pip. By default it uses the project root's requirements.txt.
@@ -45,20 +46,23 @@ jobs:
           # This assumes pytest is installed via the install-package step above
           command: python manage.py test
   deploy:
+
     docker:
       - image: google/cloud-sdk
+
     executor: python/default
+
     steps:
       - chechout
 
       - run:
-        name: gcloud
-        command: |
-          echo $GCLOUD_SERVICE_KEY | gcloud auth activate-service-account szkzsyow@appspot.gserviceaccount.com --key-file=-
+          name: gcloud
+          command: |
+            echo $GCLOUD_SERVICE_KEY | gcloud auth activate-service-account szkzsyow@appspot.gserviceaccount.com --key-file=-
       - run:
-        name: deploy
-        command: |
-          gcloud app deploy
+          name: deploy to GAE
+          command: |
+            gcloud app deploy
 
 
 # Invoke jobs via workflows
@@ -70,4 +74,4 @@ workflows:
       - build-and-test
       - deploy:
         requires:
-          - buil-and-test
+          - build-and-test
