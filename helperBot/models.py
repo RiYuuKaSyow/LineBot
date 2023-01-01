@@ -401,7 +401,7 @@ class Reply:
             
         class htmlParser(HTMLParser):
             def __init__(self,*args,**kwargs):
-                super(htmlParser, self).__init__(*args,**kwargs)
+                #super(htmlParser, self).__init__(*args,**kwargs)
                 self.datalist = []
             def handle_data(self, data):
                 self.datalist.append(data)
