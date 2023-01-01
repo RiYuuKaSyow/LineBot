@@ -72,6 +72,7 @@ jobs:
             echo '  lineToken: "${lineToken}"' >> app.yaml
             echo '  lineSecret: "${lineSecret}"' >> app.yaml
             echo '  weatherauth: "${weatherauth}"' >> app.yaml
+            cat app.yaml
 
       - run:
           name: gcloud

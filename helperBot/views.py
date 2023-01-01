@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.conf import settings
 from django.http import (
-    HttpResponse, HttpRequest, HttpResponseBadRequest
+    HttpResponse, HttpRequest, HttpResponseBadRequest, HttpResponseForbidden
 )
 from .models import Reply
 from django.views.decorators.csrf import csrf_exempt
@@ -9,7 +9,7 @@ from django.views.decorators.http import require_POST
 import configparser
 import logging
 from linebot import LineBotApi, WebhookHandler
-from linebot.exceptions import InvalidSignatureError
+from linebot.exceptions import InvalidSignatureError, LineBotApiError
 from linebot.models import(
     MessageEvent, TextMessage,
 )
@@ -29,6 +29,8 @@ def callback(request):
     try:
         handler.handle(body,signature)
     except InvalidSignatureError:
+        return HttpResponseForbidden()
+    except LineBotApiError:
         return HttpResponseBadRequest()
     return HttpResponse('OK')
 
