@@ -385,6 +385,7 @@ class Reply:
                             {
                                 'type' : 'text',
                                 "size" : "xl",
+                                'gravity' : 'center',
                                 'align' : 'center',
                                 'text' : self.data[2][0]
                             },
@@ -392,7 +393,6 @@ class Reply:
                                 'type' : 'text',
                                 "size" : "xl",
                                 'align' : 'center',
-                                'gravity' : 'center',
                                 "color" : "#ff0000",
                                 'wrap' : True,
                                 'text' : self.data[2][1]
