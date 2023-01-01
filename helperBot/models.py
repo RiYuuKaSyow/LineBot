@@ -298,18 +298,6 @@ class Reply:
                 alt_text = self.month + '統一發票',
                 contents = {
                     'type' : 'bubble',
-                    'header' : {
-                        'type' : 'box',
-                        'layout':'vertical',
-                        'contents' : [
-                            {
-                                'type' : 'text' ,
-                                "size" : "xl",
-                                'text' : self.month + '統一發票',
-                                'align' : 'center'
-                            }
-                        ]
-                    },
                     'body' : self._contents()
                 }
             )
@@ -328,6 +316,18 @@ class Reply:
                 'type' : 'box' ,
                 'layout' : 'vertical',
                 'contents':[
+                    {
+                        'type' : 'box',
+                        'layout':'vertical',
+                        'contents' : [
+                            {
+                                'type' : 'text' ,
+                                "size" : "xl",
+                                'text' : self.month + '統一發票',
+                                'align' : 'center'
+                            }
+                        ]
+                    },
                     {
                         'type' : 'box',
                         'layout' : 'horizontal',
