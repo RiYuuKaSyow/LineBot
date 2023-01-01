@@ -307,10 +307,6 @@ class Reply:
                                 "size" : "xl",
                                 'text' : self.month + '統一發票',
                                 'align' : 'center'
-                            },
-                            {
-                                'type' : 'separator' , 
-                                'color' : '#000000'
                             }
                         ]
                     },
