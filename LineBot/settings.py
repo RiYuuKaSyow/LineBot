@@ -28,8 +28,8 @@ DEBUG = True
 ALLOWED_HOSTS = ['linebot-z25s.onrender.com', 'szkzsyow.uc.r.appspot.com']
 
 #linebot
-LINE_TOKEN = os.getenv('token','test')
-LINE_SECRET = os.getenv('secret','test')
+LINE_TOKEN = os.getenv('lineToken','test')
+LINE_SECRET = os.getenv('lineSecret','test')
 #weather
 WEATHER_AUTH = os.getenv('weatherauth','test')
 
