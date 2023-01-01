@@ -68,11 +68,10 @@ jobs:
       - run:
           name: set env_var
           command: |
-            echo $djangoSecret
             echo '  djangoSecret: "'$djangoSecret'"' >> app.yaml
-            echo '  lineToken: "$lineToken"' >> app.yaml
-            echo '  lineSecret: "$lineSecret"' >> app.yaml
-            echo '  weatherauth: "$weatherauth"' >> app.yaml
+            echo '  lineToken: "'$lineToken'"' >> app.yaml
+            echo '  lineSecret: "'$lineSecret'"' >> app.yaml
+            echo '  weatherauth: "'$weatherauth'"' >> app.yaml
             cat app.yaml
 
       - run:
