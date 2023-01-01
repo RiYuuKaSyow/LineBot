@@ -42,7 +42,7 @@ jobs:
       - save_cache:
           key: deps1-{{ .Branch }}-{{ checksum "requirements.txt" }}
           paths:
-            - ".circleci/cache"
+            - .circleci/cache
 
       - run:
           name: set env_var
