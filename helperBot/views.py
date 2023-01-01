@@ -30,8 +30,6 @@ def callback(request):
         handler.handle(body,signature)
     except InvalidSignatureError:
         return HttpResponseForbidden()
-    except LineBotApiError:
-        return HttpResponseBadRequest()
     return HttpResponse('OK')
 
 @handler.add(event=MessageEvent,message=TextMessage)
