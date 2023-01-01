@@ -27,4 +27,5 @@ value = [  os.getenv('djangoSecret','test'), os.getenv('lineToken','test'), os.g
 env = { key[i]: value[i] for i in range(len(key)) }
 
 for k in env:
-    changeVal('./app.yaml', k, env[k])
+    f = changeVal('./app.yaml', k, env[k])
+    print(f)
