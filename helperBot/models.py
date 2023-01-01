@@ -400,12 +400,12 @@ class Reply:
             return res
             
 class htmlParser(HTMLParser):
-    def __init__(self,*args,**kwargs):
-        super(htmlParser, self).__init__(*args,**kwargs)
+    def __init__(self):
+        super(htmlParser, self).__init__()
         self.datalist = []
     def handle_data(self, data):
         self.datalist.append(data)
-        
+
 class Subscribe:
     def __init__(self,location='宜蘭縣',duration=3):
         return
