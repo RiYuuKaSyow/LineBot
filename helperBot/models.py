@@ -338,7 +338,7 @@ class Reply:
                         'contents' : [
                             {
                                 'type' : 'text',
-                                "size" : "xxl",
+                                "size" : "xl",
                                 'align' : 'center',
                                 'text' : self.data[0][0]
                             },
@@ -361,7 +361,7 @@ class Reply:
                         'contents' : [
                             {
                                 'type' : 'text',
-                                "size" : "xxl",
+                                "size" : "xl",
                                 'align' : 'center',
                                 'text' : self.data[1][0]
                             },
@@ -384,7 +384,7 @@ class Reply:
                         'contents' : [
                             {
                                 'type' : 'text',
-                                "size" : "xxl",
+                                "size" : "xl",
                                 'gravity' : 'center',
                                 'align' : 'center',
                                 'text' : self.data[2][0]
