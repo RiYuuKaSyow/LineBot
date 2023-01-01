@@ -309,7 +309,6 @@ class Reply:
                             },
                             {
                                 'type' : 'separator' , 
-                                'margin' : 'xl' ,
                                 'color' : '#000000'
                             }
                         ]
@@ -338,6 +337,7 @@ class Reply:
                         'contents' : [
                             {
                                 'type' : 'text',
+                                "size" : "xl",
                                 'align' : 'center',
                                 'text' : self.data[0][0]
                             },
@@ -352,7 +352,6 @@ class Reply:
                     },
                     {
                         'type' : 'separator' , 
-                        'margin' : 'xl' ,
                         'color' : '#000000'
                     },
                     {
@@ -375,7 +374,6 @@ class Reply:
                     },
                     {
                         'type' : 'separator' , 
-                        'margin' : 'xl' ,
                         'color' : '#000000'
                     },
                     {
@@ -392,6 +390,7 @@ class Reply:
                                 "size" : "xl",
                                 'align' : 'center',
                                 "color" : "#ff0000",
+                                'wrap' : True,
                                 'text' : self.data[2][1]
                             }
                         ]
