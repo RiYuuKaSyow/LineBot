@@ -304,6 +304,7 @@ class Reply:
                         'contents' : [
                             {
                                 'type' : 'text' ,
+                                "size" : "xl",
                                 'text' : self.month + '統一發票',
                                 'align' : 'center'
                             },
@@ -360,6 +361,7 @@ class Reply:
                         'contents' : [
                             {
                                 'type' : 'text',
+                                "size" : "xl",
                                 'align' : 'center',
                                 'text' : self.data[1][0]
                             },
@@ -382,6 +384,7 @@ class Reply:
                         'contents' : [
                             {
                                 'type' : 'text',
+                                "size" : "xl",
                                 'align' : 'center',
                                 'text' : self.data[2][0]
                             },
@@ -389,6 +392,7 @@ class Reply:
                                 'type' : 'text',
                                 "size" : "xl",
                                 'align' : 'center',
+                                'gravity' : 'center',
                                 "color" : "#ff0000",
                                 'wrap' : True,
                                 'text' : self.data[2][1]
