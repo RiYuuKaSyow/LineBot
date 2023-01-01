@@ -304,7 +304,7 @@ class Reply:
                         'contents' : [
                             {
                                 'type' : 'text' ,
-                                "size" : "xxl",
+                                "size" : "xl",
                                 'text' : self.month + '統一發票',
                                 'align' : 'center'
                             },
@@ -344,7 +344,7 @@ class Reply:
                             },
                             {
                                 'type' : 'text',
-                                "size" : "xxl",
+                                "size" : "xl",
                                 'align' : 'center',
                                 "color" : "#ff0000",
                                 'text' : self.data[0][1]
@@ -367,7 +367,7 @@ class Reply:
                             },
                             {
                                 'type' : 'text',
-                                "size" : "xxl",
+                                "size" : "xl",
                                 'align' : 'center',
                                 "color" : "#ff0000",
                                 'text' : self.data[1][1]
@@ -391,11 +391,11 @@ class Reply:
                             },
                             {
                                 'type' : 'text',
-                                "size" : "xxl",
+                                "size" : "xl",
                                 'align' : 'center',
                                 "color" : "#ff0000",
                                 'wrap' : True,
-                                'text' : self.data[2][1].replace('、','')
+                                'text' : self.data[2][1].replace('、','\n')
                             }
                         ]
                     }
