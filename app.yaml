@@ -18,11 +18,6 @@
 # [START gaestd_py_django_app_yaml]
 runtime: python39
 
-env_variables:
-  djangoSecret : ''
-  lineToken: ''
-  lineSecret: ''
-  weatherauth: ''
   # This setting is used in settings.py to configure your ALLOWED_HOSTS
   # APPENGINE_URL: PROJECT_ID.uc.r.appspot.com
 
@@ -39,3 +34,5 @@ handlers:
   script: auto
 # [END gaestd_py_django_app_yaml]
 # [END django_app]
+
+env_variables:

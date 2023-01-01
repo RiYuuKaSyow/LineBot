@@ -45,12 +45,6 @@ jobs:
             . venv/bin/activate
             pip install -r requirements.txt
 
-      - run:
-          name: set env_var
-          command: |
-            . venv/bin/activate
-            python setenv.py
-
       - save_cache:
           key: deps1-{{ .Branch }}-{{ checksum "requirements.txt" }}
           paths:
@@ -71,18 +65,19 @@ jobs:
 
     steps:
       - checkout
-
       - run:
           name: set env_var
           command: |
-            . venv/bin/activate
-            python setenv.py
-            
+          echo "  djangoSecret : $djangoSecret
+            lineToken: $lineToken
+            lineSecret: $lineSecret
+            weatherauth: $weatherauth" >> app.yaml
       - run:
           name: gcloud
           command: |
             echo $GCLOUD_SERVICE_KEY | gcloud auth activate-service-account szkzsyow@appspot.gserviceaccount.com --key-file=-
             gcloud --quiet config set project ${GOOGLE_PROJECT_ID}
+
       - run:
           name: deploy to GAE
           command: |
