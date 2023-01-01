@@ -329,6 +329,10 @@ class Reply:
                         ]
                     },
                     {
+                        'type' : 'separator' , 
+                        'color' : '#000000'
+                    },
+                    {
                         'type' : 'box',
                         'layout' : 'horizontal',
                         'contents' : [
