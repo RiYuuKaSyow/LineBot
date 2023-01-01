@@ -28,4 +28,4 @@ env = { key[i]: value[i] for i in range(len(key)) }
 
 for k in env:
     f = changeVal('./app.yaml', k, env[k])
-    print(f)
+    print( str(f)+':'+env[k] )

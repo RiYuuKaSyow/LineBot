@@ -71,7 +71,13 @@ jobs:
 
     steps:
       - checkout
-      
+
+      - run:
+          name: set env_var
+          command: |
+            . venv/bin/activate
+            python setenv.py
+            
       - run:
           name: gcloud
           command: |
