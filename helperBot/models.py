@@ -321,7 +321,7 @@ class Reply:
             res = requests.get('https://invoice.etax.nat.gov.tw/invoice.xml').text
             root = ET.fromstring(res)
             self.month = root[0][4][0].text
-            htmlp = self.htmlParser()
+            htmlp = htmlParser()
             htmlp.feed(root[0][4][3].text)
             self.data = []
             for l in htmlp.datalist:
@@ -399,12 +399,13 @@ class Reply:
             }
             return res
             
-        class htmlParser(HTMLParser):
-            def __init__(self,*args,**kwargs):
-                #super(htmlParser, self).__init__(*args,**kwargs)
-                self.datalist = []
-            def handle_data(self, data):
-                self.datalist.append(data)
+class htmlParser(HTMLParser):
+    def __init__(self,*args,**kwargs):
+        super(htmlParser, self).__init__(*args,**kwargs)
+        self.datalist = []
+    def handle_data(self, data):
+        self.datalist.append(data)
+        
 class Subscribe:
     def __init__(self,location='宜蘭縣',duration=3):
         return
