@@ -68,10 +68,11 @@ jobs:
       - run:
           name: set env_var
           command: |
-          echo "  djangoSecret : $djangoSecret
-            lineToken: $lineToken
-            lineSecret: $lineSecret
-            weatherauth: $weatherauth" >> app.yaml
+          echo   djangoSecret : $djangoSecret >> app.yaml
+          echo   lineToken: $lineToken >> app.yaml
+          echo   lineSecret: $lineSecret >> app.yaml
+          echo   weatherauth: $weatherauth >> app.yaml
+
       - run:
           name: gcloud
           command: |
