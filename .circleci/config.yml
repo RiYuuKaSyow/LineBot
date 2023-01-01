@@ -59,7 +59,9 @@ jobs:
       - run:
           name: Run tests
           # This assumes pytest is installed via the install-package step above
-          command: python manage.py test
+          command: |
+            . venv/bin/activate
+            python manage.py test
   deploy:
 
     docker:
