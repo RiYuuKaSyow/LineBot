@@ -304,7 +304,7 @@ class Reply:
                         'contents' : [
                             {
                                 'type' : 'text' ,
-                                "size" : "xl",
+                                "size" : "xxl",
                                 'text' : self.month + '統一發票',
                                 'align' : 'center'
                             },
@@ -338,13 +338,13 @@ class Reply:
                         'contents' : [
                             {
                                 'type' : 'text',
-                                "size" : "xl",
+                                "size" : "xxl",
                                 'align' : 'center',
                                 'text' : self.data[0][0]
                             },
                             {
                                 'type' : 'text',
-                                "size" : "xl",
+                                "size" : "xxl",
                                 'align' : 'center',
                                 "color" : "#ff0000",
                                 'text' : self.data[0][1]
@@ -361,13 +361,13 @@ class Reply:
                         'contents' : [
                             {
                                 'type' : 'text',
-                                "size" : "xl",
+                                "size" : "xxl",
                                 'align' : 'center',
                                 'text' : self.data[1][0]
                             },
                             {
                                 'type' : 'text',
-                                "size" : "xl",
+                                "size" : "xxl",
                                 'align' : 'center',
                                 "color" : "#ff0000",
                                 'text' : self.data[1][1]
@@ -384,18 +384,18 @@ class Reply:
                         'contents' : [
                             {
                                 'type' : 'text',
-                                "size" : "xl",
+                                "size" : "xxl",
                                 'gravity' : 'center',
                                 'align' : 'center',
                                 'text' : self.data[2][0]
                             },
                             {
                                 'type' : 'text',
-                                "size" : "xl",
+                                "size" : "xxl",
                                 'align' : 'center',
                                 "color" : "#ff0000",
                                 'wrap' : True,
-                                'text' : self.data[2][1]
+                                'text' : self.data[2][1].replace('、','')
                             }
                         ]
                     }
