@@ -300,6 +300,7 @@ class Reply:
                     'type' : 'bubble',
                     'header' : {
                         'type' : 'box',
+                        'layout':'vertical',
                         'contents' : [
                             {
                                 'type' : 'text' ,
